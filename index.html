@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMAD / SuperPowers / GStack 对比总结</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #2563eb;
+      --good: #047857;
+      --warn: #b45309;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 32px 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+    }
+    h1, h2 {
+      margin: 0 0 12px;
+      line-height: 1.25;
+    }
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 28px;
+    }
+    p {
+      margin: 10px 0;
+    }
+    .lead {
+      font-size: 17px;
+    }
+    .recommend {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-left: 4px solid var(--accent);
+      background: #eff6ff;
+      border-radius: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 14px;
+      background: #fff;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 12px;
+      vertical-align: top;
+      text-align: left;
+    }
+    th {
+      background: #f9fafb;
+    }
+    ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+    .tag {
+      display: inline-block;
+      padding: 4px 10px;
+      margin-right: 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      background: #eef2ff;
+      color: #4338ca;
+    }
+    .good { color: var(--good); font-weight: 600; }
+    .warn { color: var(--warn); font-weight: 600; }
+    .muted { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <span class="tag">AI Workflow</span>
+      <span class="tag">Agent Framework</span>
+      <h1>BMAD / SuperPowers / GStack 对比总结</h1>
+
+      <p class="lead">
+        别把这三个看成一类：<strong>BMAD 像项目方法论</strong>，<strong>SuperPowers 像工程军规</strong>，<strong>GStack 像一支虚拟创业团队</strong>。
+      </p>
+
+      <div class="recommend">
+        <strong>推荐结论：</strong>
+        默认优先选 <strong>SuperPowers</strong>，因为它最容易落地、对代码质量提升最直接；
+        企业多人协作优先 <strong>BMAD</strong>；
+        Founder / 小团队从想法一路冲到上线，优先 <strong>GStack</strong>。
+      </div>
+
+      <h2>核心对比</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>方案</th>
+            <th>更像什么</th>
+            <th>优点</th>
+            <th>缺点</th>
+            <th>最适合</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>BMAD</strong></td>
+            <td>AI 版项目管理方法</td>
+            <td>
+              <ul>
+                <li>流程完整，覆盖需求、规划、架构、实施</li>
+                <li>角色清晰，适合多人协作和交接</li>
+                <li>文档沉淀强，适合留痕和可审计场景</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>偏重，前期启动成本高</li>
+                <li>小需求、小修复容易显得“官僚”</li>
+              </ul>
+            </td>
+            <td>企业项目、复杂协作、要流程治理的团队</td>
+          </tr>
+          <tr>
+            <td><strong>SuperPowers</strong></td>
+            <td>Agent 的工程操作系统</td>
+            <td>
+              <ul>
+                <li>强制 brainstorm → plan → TDD → review → verify</li>
+                <li>最能稳住代码质量和交付纪律</li>
+                <li>对个人开发和核心模块特别有效</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>对快速试错、粗原型不够友好</li>
+                <li>更强在工程执行，不强在项目治理</li>
+              </ul>
+            </td>
+            <td>个人开发、关键代码、重质量交付</td>
+          </tr>
+          <tr>
+            <td><strong>GStack</strong></td>
+            <td>虚拟产品 / 工程团队</td>
+            <td>
+              <ul>
+                <li>CEO、设计、QA、安全、发布等角色齐全</li>
+                <li>覆盖 plan → review → QA → ship 全链路</li>
+                <li>适合把想法快速推进成产品</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>技能多，学习成本高</li>
+                <li>工程纪律不如 SuperPowers 那么硬</li>
+              </ul>
+            </td>
+            <td>Founder、Tech Lead、0→1 产品、小团队冲刺</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>一句话理解</h2>
+      <ul>
+        <li><strong>BMAD</strong>：给 AI 配了一套组织流程，像 PM、架构师、开发、QA 一起干活。</li>
+        <li><strong>SuperPowers</strong>：给 AI 戴上“先想清楚、先写测试、再交付”的紧箍咒。</li>
+        <li><strong>GStack</strong>：给你配了一支会开产品会、跑 QA、做评审、发 PR 的 startup 小队。</li>
+      </ul>
+
+      <h2>怎么选</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>场景</th>
+            <th>推荐</th>
+            <th>原因</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>默认通用场景</td>
+            <td><strong>SuperPowers</strong></td>
+            <td>见效最快，最直接提升代码质量和交付稳定性。</td>
+          </tr>
+          <tr>
+            <td>企业团队 / 多人协作</td>
+            <td><strong>BMAD + SuperPowers</strong></td>
+            <td>BMAD 管流程和交接，SuperPowers 管工程质量。</td>
+          </tr>
+          <tr>
+            <td>创业 / 内部孵化 / 0→1</td>
+            <td><strong>GStack + SuperPowers</strong></td>
+            <td>GStack 管节奏和角色分工，SuperPowers 防止代码失控。</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>最终判断</h2>
+      <p><span class="good">最稳妥：</span> SuperPowers</p>
+      <p><span class="good">最适合大组织：</span> BMAD</p>
+      <p><span class="good">最适合 Founder 冲刺：</span> GStack</p>
+
+      <p class="muted">
+        注：这个总结基于三者当前公开定位。BMAD 强调流程与角色化协作，SuperPowers 强调 mandatory workflow / TDD / review，GStack 强调 virtual engineering team、QA、ship 和 sprint 闭环。
+      </p>
+    </div>
+  </div>
+</body>
+</html>
